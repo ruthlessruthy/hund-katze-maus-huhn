@@ -21,6 +21,8 @@ body{
 
 img{
 	width: 100%;
+	position: relative;
+	top: 0
 }
 
 .box{
@@ -44,10 +46,30 @@ img{
 	width: 25%;
 	float: left;
 	padding: 10px;
+	position: relative;
 }
 
 .clear::after{
 	content: "";
 	display: block;
 	clear: both;
+}
+
+
+.float p{
+	position: absolute;
+	background: white;
+	bottom: 10px;
+	left: 10px;
+	z-index: 1;
+	padding: 10px;
+	width: calc(100%-20px);
+}
+
+.hinweis{
+	display: none;
+}
+
+a:hover .hinweis{
+	display: block
 }
